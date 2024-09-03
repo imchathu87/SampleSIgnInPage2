@@ -408,42 +408,7 @@
     <div class="loyalty"><input type="hidden" name="ex_format" value="AUD$"><span data-loyalty=""></span></div>
     <div class="shoppingCartLink"><input type="hidden" name="shoppingCartLink" value="https://m.uat-mimco-au.crgsite.net/default.aspx?Z=c&amp;action=cart
 								"></div>
-    <div class="content snippet top-banner-cms-mb"><script type="text/javascript">
-  //fix blog list issue
-  window.addEventListener('DOMContentLoaded', () => {
-    const addWrapper = () => {
-      const blogListItems = document.querySelectorAll('.blog-main .blog-list-item');
-      console.log('check');
-      [...blogListItems].forEach((blogItem) => {
-        if (!blogItem.querySelector('.tab-background.tab')) {
-          const newDivTabBackground = document.createElement('div');
-          const newDivTabCopy = document.createElement('div');
-
-          newDivTabBackground.className = 'tab-background tab';
-          newDivTabCopy.className = 'tab-copy';
-          newDivTabBackground.append(newDivTabCopy);
-          blogItem.querySelector('.post-wrapper').setAttribute('style', 'width: 322px!important;height: 364px!important;');
-          blogItem.querySelector('.post-wrapper').append(newDivTabBackground);
-          const postTitle = blogItem.querySelector('.post-title') ?? '';
-          const postIntro = blogItem.querySelector('.post-intro') ?? '';
-          blogItem.querySelector('.tab-background.tab .tab-copy').append(postIntro);
-          blogItem.querySelector('.tab-background.tab .tab-copy').append(postTitle);
-        }
-      });
-    };
-
-    addWrapper();
-
-    const loadMoreButton = document.querySelector('.load-more button');
-
-    loadMoreButton?.addEventListener('click', function () {
-      const loading = setInterval(function () {
-        addWrapper();
-        console.log('trigger once');
-      }, 500);
-    });
-  });
-</script>
+    <div class="content snippet top-banner-cms-mb">
 
 <script src="./MIMCO _ Unique Bags, Accessories &amp; Shoes For Women_files/swiper-bundle.min.js"></script>
 <script src="./MIMCO _ Unique Bags, Accessories &amp; Shoes For Women_files/saved_resource(1)"></script>
